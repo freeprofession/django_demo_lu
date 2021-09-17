@@ -118,6 +118,16 @@ class PermissionsListView(ListApiView):
 
 class AdminUSerLoginApiView(APIView):
 
+    def get(self, request, *args, **kwargs):
+        resp = {
+            'error': 1,
+            'msg': '参数错误'
+        }
+        data = request.query_params
+        user_id = data['user_id'] if 'user_id' in data else None
+        token = data['token'] if 'token' in data else None
+        return Response(resp)
+
     def post(self, request, *args, **kwargs):
         resp = {
             'error': 1,

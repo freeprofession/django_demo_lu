@@ -33,12 +33,12 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
+    # 'django.contrib.admin',
+    # 'django.contrib.auth',
+    # 'django.contrib.contenttypes',
+    # 'django.contrib.sessions',
+    # 'django.contrib.messages',
+    # 'django.contrib.staticfiles',
     'django',
     'django_filters',
     'rest_framework',
@@ -91,10 +91,10 @@ WSGI_APPLICATION = 'django_demo_lu.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'test_django',
+        'NAME': 'test_demo',
         'USER': 'root',
         'PASSWORD': 'test01',
-        'HOST': '127.0.0.1',
+        'HOST': '192.168.50.54',
         'PORT': '3306'
     }
 }
@@ -144,9 +144,9 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # 是否允许所有地址访问，True则白名单不生效
-# CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_ALLOW_ALL = True
 # 白名单
-CORS_ORIGIN_WHITELIST = ('http://127.0.0.1:80', 'http://localhost:80')
+# CORS_ORIGIN_WHITELIST = ('http://127.0.0.1:8000', 'http://localhost:8000')
 # 允许携带cookie
 CORS_ALLOW_CREDENTIALS = True
 
